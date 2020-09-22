@@ -213,6 +213,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiDoze
 
+# DPM
+PRODUCT_PACKAGES += \
+    libshim_dpmframework
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.clearkey
