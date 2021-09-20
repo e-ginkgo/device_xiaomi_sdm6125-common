@@ -26,7 +26,7 @@ if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
 LINEAGE_ROOT="$MY_DIR"/../../..
 
-HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
+HELPER="$LINEAGE_ROOT"/tools/extract-utils/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -63,11 +63,11 @@ function blob_fixup() {
     case "${1}" in
 
     vendor/bin/mlipayd@1.1)
-        patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
+        "${PATCHELF}" --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
         ;;
 
     vendor/lib64/libmlipay.so | vendor/lib64/libmlipay@1.1.so)
-        patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
+        "${PATCHELF}" --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
         sed -i "s|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g" "${2}"
         ;;
     esac
