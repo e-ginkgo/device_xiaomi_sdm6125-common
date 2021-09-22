@@ -238,6 +238,13 @@ vendor/lib64/liboemcrypto.so|14289b52bddd8d5ad100452c475cf4cbedca67cb
 vendor/lib/liboemcrypto.so|822a8413aa5229e66b090113295f79d6839c004f
 vendor/lib/libwvhidl.so|aaee55dbe013214b53313a2153d4990478a4ee17
 
+# DSP
+vendor/bin/dspservice
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so
+vendor/lib/vendor.qti.hardware.dsp@1.0.so
+
 # FM
 system_ext/lib64/fm_helium.so
 system_ext/lib64/libfm-hci.so
