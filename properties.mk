@@ -117,10 +117,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.crypto.dm_default_key.options_format.version=2 \
-    ro.crypto.volume.filenames_mode=aes-256-cts \
-    ro.crypto.volume.metadata.method=dm-default-key \
-    ro.crypto.volume.options=::v2
+    ro.crypto.allow_encrypt_override=true \
+    ro.crypto.volume.filenames_mode=aes-256-cts
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
