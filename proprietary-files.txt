@@ -55,6 +55,8 @@ vendor/lib/libqtigef.so
 vendor/lib/libsurround_3mic_proc.so
 
 # Audio FX modules
+system_ext/etc/permissions/audiosphere.xml
+system_ext/framework/audiosphere.jar
 vendor/lib/soundfx/libasphere.so
 
 # Audio (A2dp)

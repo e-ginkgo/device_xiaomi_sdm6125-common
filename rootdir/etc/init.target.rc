@@ -461,6 +461,20 @@ on property:init.svc.hwcomposer-2-1=running
 on property:init.svc.hwcomposer-2-1=restarting
     stop ppd
 
+service nqnfcinfo /vendor/bin/nqnfcinfo
+    class late_start
+    group nfc
+    user system
+    oneshot
+    disabled
+
+service nqnfc_2_0_hal_service /vendor/bin/hw/vendor.nxp.hardware.nfc@2.0-service
+    class hal
+    user nfc
+    group nfc
+    override
+    disabled
+
 on property:ro.product.device=willow
     enable nqnfcinfo
     enable nqnfc_2_0_hal_service
