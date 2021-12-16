@@ -415,6 +415,7 @@ vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc
 vendor/lib64/libkeymasterdeviceutils.so
 vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
+vendor/lib64/libqcbor.so
 vendor/lib64/libqtikeymaster4.so
 
 # Listen
@@ -512,6 +513,7 @@ vendor/lib64/libperipheral_client.so
 
 # Postprocessing - from - from laurel_sprout package version: RKQ1.200903.002 V12.0.14.0.RFQMIXM
 vendor/bin/hw/vendor.display.color@1.0-service|ce61a8290f57c5d759280038e6cfd3f7db887269
+vendor/bin/ppd|983952475508476900db4f0c920351b34bc025f5
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib64/libdisp-aba.so|b7c8567c3079372479c85834ba1aab4e2eee5522
 vendor/lib64/libdpps.so|589892b909afb835e9a953aa3dc530d552683961
@@ -737,6 +739,7 @@ vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so
 vendor/lib64/vendor.qti.ims.rcsconfig@2.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
+
 # Snapdragon Computer Vision Engine
 vendor/lib/libfastcvdsp_stub.so
 vendor/lib/libfastcvopt.so
@@ -763,14 +766,11 @@ vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc_default_listener.so
 
-# SOTER
--app/SoterService/SoterService.apk
-system_ext/framework/vendor.qti.hardware.soter-V1.0-java.jar
+# Soter
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
-vendor/bin/vendor.qti.hardware.soter@1.0-provision
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 
 # Thermal
 vendor/bin/thermal-engine
